@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Fernanda Goulart | Psicologia Clínica e TCC</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&amp;family=Manrope:wght@300;400;600;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                "on-tertiary": "#ffffff",
+                "surface-container-lowest": "#ffffff",
+                "on-primary-fixed": "#1b1d0e",
+                "error": "#ba1a1a",
+                "on-primary-container": "#6f705c",
+                "primary-fixed-dim": "#c8c8b0",
+                "surface-container": "#f0eded",
+                "secondary": "#8e4e00",
+                "on-secondary-fixed-variant": "#6c3a00",
+                "primary": "#5e604d",
+                "surface": "#fcf9f8",
+                "inverse-on-surface": "#f3f0f0",
+                "on-primary-fixed-variant": "#474836",
+                "tertiary-fixed": "#e6e5b9",
+                "on-tertiary-fixed": "#1d1d03",
+                "on-background": "#1b1c1c",
+                "on-secondary": "#ffffff",
+                "on-error": "#ffffff",
+                "error-container": "#ffdad6",
+                "on-tertiary-container": "#71714d",
+                "on-surface-variant": "#47473f",
+                "on-primary": "#ffffff",
+                "surface-bright": "#fcf9f8",
+                "inverse-primary": "#c8c8b0",
+                "background": "#fcf9f8",
+                "on-tertiary-fixed-variant": "#484828",
+                "on-secondary-container": "#723e00",
+                "tertiary-fixed-dim": "#cac99f",
+                "surface-dim": "#dcd9d9",
+                "on-error-container": "#93000a",
+                "secondary-fixed": "#ffdcc1",
+                "inverse-surface": "#303030",
+                "primary-fixed": "#e4e4cc",
+                "outline": "#78776e",
+                "on-secondary-fixed": "#2e1500",
+                "surface-container-highest": "#e4e2e1",
+                "surface-container-high": "#eae7e7",
+                "tertiary-container": "#f8f6c9",
+                "primary-container": "#f5f5dc",
+                "surface-container-low": "#f6f3f2",
+                "on-surface": "#1b1c1c",
+                "surface-tint": "#5e604d",
+                "outline-variant": "#c8c7bc",
+                "tertiary": "#60603e",
+                "secondary-container": "#ffa857",
+                "secondary-fixed-dim": "#ffb779",
+                "surface-variant": "#e4e2e1"
+              },
+              "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+              },
+              "spacing": {
+                "container-max": "1200px",
+                "stack-lg": "32px",
+                "stack-md": "16px",
+                "margin-mobile": "20px",
+                "margin-desktop": "80px",
+                "gutter": "24px",
+                "stack-sm": "8px",
+                "section-padding": "120px"
+              },
+              "fontFamily": {
+                "headline-md": ["Libre Caslon Text"],
+                "body-md": ["Manrope"],
+                "display-lg": ["Libre Caslon Text"],
+                "headline-sm": ["Libre Caslon Text"],
+                "display-lg-mobile": ["Libre Caslon Text"],
+                "body-lg": ["Manrope"],
+                "label-md": ["Manrope"]
+              },
+              "fontSize": {
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "400"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "400"}],
+                "display-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+        .accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; }
+        .accordion-item.active .accordion-content { max-height: 200px; }
+        .accordion-item.active .icon-rotate { transform: rotate(180deg); }
+        .shadow-soft { box-shadow: 0 10px 30px -10px rgba(94, 96, 77, 0.1); }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-outline-variant/30">
+<nav class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto w-full">
+<div class="font-headline-md text-headline-md tracking-tight text-primary">Fernanda Goulart</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-label-md text-label-md text-secondary font-bold hover:text-secondary transition-colors duration-300" href="#inicio">Início</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#especialidades">Especialidades</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#servicos">Serviços</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#depoimentos">Depoimentos</a>
+<a class="bg-secondary text-on-secondary px-6 py-2 rounded-full font-label-md text-label-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5" href="https://wa.me/5521999999999">Agendar</a>
+</div>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</nav>
+</header>
+<!-- Hero Section -->
+<section class="pt-32 pb-section-padding px-margin-mobile md:px-margin-desktop bg-primary-container/20" id="inicio">
+<div class="max-w-container-max mx-auto grid md:grid-cols-2 gap-stack-lg items-center">
+<div class="fade-in">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-6 leading-tight">
+                    Reconquiste seu equilíbrio emocional com a Terapia Cognitivo-Comportamental
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8 max-w-lg">
+                    Psicologia especializada em evidências científicas para transformar pensamentos em ações saudáveis. Localizada no coração do Rio de Janeiro.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="bg-secondary text-on-secondary px-8 py-4 rounded-full font-label-md text-label-md text-center hover:bg-on-secondary-fixed-variant transition-all duration-300 shadow-soft" href="https://wa.me/5521999999999">
+                        Agendar Consulta via WhatsApp
+                    </a>
+<a class="border border-outline text-primary px-8 py-4 rounded-full font-label-md text-label-md text-center hover:bg-surface-container transition-all" href="#especialidades">
+                        Ver Especialidades
+                    </a>
+</div>
+</div>
+<div class="relative fade-in">
+<div class="aspect-[4/5] rounded-2xl overflow-hidden shadow-soft">
+<img class="w-full h-full object-cover" data-alt="Uma psicóloga profissional de meia-idade com expressão acolhedora e confiante, vestindo um blazer bege sofisticado, sentada em um consultório moderno e iluminado com tons de branco e bege. O ambiente ao fundo apresenta estantes com livros organizados e uma planta decorativa discreta, criando uma atmosfera de calma, autoridade clínica e luxo silencioso." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNAvBsUWZyO6A0cswAbFhnelja-d6FvTvsWHvCQfusGZb2xJB15Uq3WuID5jtr2BVNZgGm2YMRi9XLerfd0GcbwQBAlOjr1R3n34OQOYtVCat7qtGRE4cUOOnyRJxiKlZbUq2Pa7BDxJo54J9YAuoiJ1fsFr1l1X_wk4nfCTwIg5hE2zuvXC3yTzF81TiOdgTcc591Fegdo9je7s_ABWGEGHmEfIFP6qzHWp_tZRP8bV6ifzZpLwnNuKtooNC2N3TWKAw6tBka8Q"/>
+</div>
+<div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-soft hidden md:block">
+<div class="text-secondary font-bold text-headline-sm font-headline-sm">10+ Anos</div>
+<div class="text-on-surface-variant text-label-md font-label-md">Experiência Clínica</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Seção de Dor -->
+<section class="py-section-padding px-margin-mobile md:px-margin-desktop" id="especialidades">
+<div class="max-w-container-max mx-auto">
+<div class="text-center mb-16 fade-in">
+<span class="text-secondary font-label-md text-label-md tracking-widest uppercase">Como posso te ajudar</span>
+<h2 class="font-headline-md text-headline-md text-primary mt-2">Tratamentos Especializados</h2>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<!-- Ansiedade -->
+<div class="bg-surface-container-low p-10 rounded-2xl border border-outline-variant/30 hover:border-secondary transition-all group fade-in">
+<span class="material-symbols-outlined text-secondary text-4xl mb-4">psychology</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-4">Ansiedade</h3>
+<p class="text-on-surface-variant mb-6">Ferramentas práticas para gerenciar o fluxo constante de preocupações e recuperar a paz no dia a dia.</p>
+<a class="text-secondary font-bold inline-flex items-center gap-2 group-hover:gap-4 transition-all" href="https://wa.me/5521999999999">Saiba mais <span class="material-symbols-outlined">arrow_forward</span></a>
+</div>
+<!-- Depressão -->
+<div class="bg-surface-container-low p-10 rounded-2xl border border-outline-variant/30 hover:border-secondary transition-all group fade-in">
+<span class="material-symbols-outlined text-secondary text-4xl mb-4">sentiment_dissatisfied</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-4">Depressão</h3>
+<p class="text-on-surface-variant mb-6">Suporte empático e estruturado para reencontrar o sentido e a energia através da ativação comportamental.</p>
+<a class="text-secondary font-bold inline-flex items-center gap-2 group-hover:gap-4 transition-all" href="https://wa.me/5521999999999">Saiba mais <span class="material-symbols-outlined">arrow_forward</span></a>
+</div>
+<!-- Stress -->
+<div class="bg-surface-container-low p-10 rounded-2xl border border-outline-variant/30 hover:border-secondary transition-all group fade-in">
+<span class="material-symbols-outlined text-secondary text-4xl mb-4">self_improvement</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-4">Burnout &amp; Stress</h3>
+<p class="text-on-surface-variant mb-6">Estratégias de regulação emocional e manejo de stress para quem vive em ambientes de alta performance.</p>
+<a class="text-secondary font-bold inline-flex items-center gap-2 group-hover:gap-4 transition-all" href="https://wa.me/5521999999999">Saiba mais <span class="material-symbols-outlined">arrow_forward</span></a>
+</div>
+</div>
+</div>
+</section>
+<!-- Serviços (Bento Grid) -->
+<section class="py-section-padding px-margin-mobile md:px-margin-desktop bg-surface" id="servicos">
+<div class="max-w-container-max mx-auto">
+<div class="grid md:grid-cols-4 md:grid-rows-2 gap-6 h-auto md:h-[600px]">
+<div class="md:col-span-2 md:row-span-2 bg-primary text-on-primary p-12 rounded-3xl flex flex-col justify-end fade-in">
+<h3 class="font-headline-md text-headline-md mb-4">Terapia Individual</h3>
+<p class="font-body-lg opacity-80 mb-8">Processo focado inteiramente nas suas necessidades, utilizando protocolos de TCC personalizados para resultados duradouros.</p>
+<button class="bg-white text-primary px-6 py-3 rounded-full w-fit font-bold">Solicitar Orçamento</button>
+</div>
+<div class="md:col-span-2 bg-tertiary-container p-10 rounded-3xl fade-in">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-tertiary-container mb-2">Terapia para Casais</h3>
+<p class="text-on-surface-variant max-w-xs">Melhore a comunicação e resolva conflitos com mediação profissional baseada em evidências.</p>
+</div>
+<span class="material-symbols-outlined text-secondary text-3xl">favorite</span>
+</div>
+</div>
+<div class="md:col-span-2 bg-secondary-fixed p-10 rounded-3xl fade-in">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-secondary-fixed mb-2">Orientação Profissional</h3>
+<p class="text-on-surface-variant max-w-xs">Alinhamento de carreira, propósito e transições profissionais estratégicas.</p>
+</div>
+<span class="material-symbols-outlined text-secondary text-3xl">work</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Diferenciais -->
+<section class="py-section-padding px-margin-mobile md:px-margin-desktop overflow-hidden">
+<div class="max-w-container-max mx-auto flex flex-col md:flex-row items-center gap-stack-lg">
+<div class="w-full md:w-1/2 fade-in">
+<div class="relative p-4">
+<div class="absolute inset-0 bg-primary-container rounded-3xl transform rotate-3 -z-10 opacity-30"></div>
+<img class="rounded-3xl shadow-xl w-full h-[500px] object-cover" data-alt="Um consultório de psicologia luxuoso no Centro do Rio de Janeiro. A decoração é minimalista com poltronas de design ergonômico em tecido bege, uma mesa de madeira clara e janelas amplas que permitem a entrada de luz natural suave. O ambiente transmite profissionalismo, privacidade e um senso de paz profunda e exclusividade." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiT4-Fz1ZAmRx4KfO0v-95Ma-uBhvsTChM3FR_xjMRdAiHFxXX0R7rqLVNdCXvGCZXYfyw8r_1SjQcoCxs_jeen4YtJouJsNjRZuMTWPh7UvAB5w34MjBWL1B6obLMwyInT_SJyBGQWYO90eb_zUunXKK5e93pItVqyFzBe3s1wjWfg6wqLpAMG2o3WhSz5_1yBZUcpUYvS7ozlI8kEpt6HR0qJqFW0BC0Oiy0wgnWvVAXxuPz0kBg76whgDjbZlc7ycPbnhieUA"/>
+</div>
+</div>
+<div class="w-full md:w-1/2 fade-in">
+<h2 class="font-headline-md text-headline-md text-primary mb-8">Por que escolher este acompanhamento?</h2>
+<ul class="space-y-8">
+<li class="flex items-start gap-4">
+<div class="bg-secondary/10 p-2 rounded-lg text-secondary">
+<span class="material-symbols-outlined">verified</span>
+</div>
+<div>
+<h4 class="font-bold text-primary">Base Científica</h4>
+<p class="text-on-surface-variant">Prática exclusivamente fundamentada na Terapia Cognitivo-Comportamental, com protocolos validados internacionalmente.</p>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<div class="bg-secondary/10 p-2 rounded-lg text-secondary">
+<span class="material-symbols-outlined">volunteer_activism</span>
+</div>
+<div>
+<h4 class="font-bold text-primary">Atendimento Humanizado</h4>
+<p class="text-on-surface-variant">Acolhimento livre de julgamentos, focado na construção de uma aliança terapêutica forte e segura.</p>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<div class="bg-secondary/10 p-2 rounded-lg text-secondary">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<div>
+<h4 class="font-bold text-primary">Localização Privilegiada</h4>
+<p class="text-on-surface-variant">Consultório premium no Centro do Rio de Janeiro, com fácil acesso e total privacidade para sua conveniência.</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- Depoimentos -->
+<section class="py-section-padding px-margin-mobile md:px-margin-desktop bg-surface-container-low" id="depoimentos">
+<div class="max-w-container-max mx-auto">
+<div class="text-center mb-16 fade-in">
+<h2 class="font-headline-md text-headline-md text-primary">Relatos de quem transformou sua vida</h2>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<!-- Depoimento 1 -->
+<div class="bg-white p-8 rounded-2xl shadow-soft fade-in">
+<div class="flex text-secondary mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="italic text-on-surface-variant mb-6">"A Fernanda me ajudou a entender padrões que eu nem sabia que tinha. Hoje me sinto muito mais no controle das minhas emoções."</p>
+<div class="font-bold text-primary">Mariana S.</div>
+<div class="text-label-md text-outline">Empresária</div>
+</div>
+<!-- Depoimento 2 -->
+<div class="bg-white p-8 rounded-2xl shadow-soft fade-in">
+<div class="flex text-secondary mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="italic text-on-surface-variant mb-6">"Excelente profissional. O foco prático da TCC fez toda a diferença para o meu tratamento de ansiedade e pânico."</p>
+<div class="font-bold text-primary">Ricardo M.</div>
+<div class="text-label-md text-outline">Engenheiro</div>
+</div>
+<!-- Depoimento 3 -->
+<div class="bg-white p-8 rounded-2xl shadow-soft fade-in">
+<div class="flex text-secondary mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="italic text-on-surface-variant mb-6">"Ambiente acolhedor e atendimento nota 10. Recomendo para quem busca seriedade e resultados concretos."</p>
+<div class="font-bold text-primary">Juliana F.</div>
+<div class="text-label-md text-outline">Advogada</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ -->
+<section class="py-section-padding px-margin-mobile md:px-margin-desktop">
+<div class="max-w-3xl mx-auto">
+<h2 class="font-headline-md text-headline-md text-primary text-center mb-12 fade-in">Perguntas Frequentes</h2>
+<div class="space-y-4">
+<div class="accordion-item border border-outline-variant rounded-xl fade-in overflow-hidden">
+<button class="w-full flex justify-between items-center p-6 text-left hover:bg-surface-container transition-all" onclick="toggleAccordion(this)">
+<span class="font-bold text-primary">Quanto tempo dura cada sessão?</span>
+<span class="material-symbols-outlined icon-rotate transition-transform">expand_more</span>
+</button>
+<div class="accordion-content">
+<p class="px-6 pb-6 text-on-surface-variant">As sessões individuais têm duração média de 50 minutos e ocorrem semanalmente, dependendo da necessidade clínica de cada paciente.</p>
+</div>
+</div>
+<div class="accordion-item border border-outline-variant rounded-xl fade-in overflow-hidden">
+<button class="w-full flex justify-between items-center p-6 text-left hover:bg-surface-container transition-all" onclick="toggleAccordion(this)">
+<span class="font-bold text-primary">Você aceita convênio médico?</span>
+<span class="material-symbols-outlined icon-rotate transition-transform">expand_more</span>
+</button>
+<div class="accordion-content">
+<p class="px-6 pb-6 text-on-surface-variant">Trabalho exclusivamente com atendimentos particulares para garantir a qualidade e o tempo necessário para cada caso. Forneço recibos para solicitação de reembolso.</p>
+</div>
+</div>
+<div class="accordion-item border border-outline-variant rounded-xl fade-in overflow-hidden">
+<button class="w-full flex justify-between items-center p-6 text-left hover:bg-surface-container transition-all" onclick="toggleAccordion(this)">
+<span class="font-bold text-primary">Como funciona o primeiro contato?</span>
+<span class="material-symbols-outlined icon-rotate transition-transform">expand_more</span>
+</button>
+<div class="accordion-content">
+<p class="px-6 pb-6 text-on-surface-variant">O primeiro contato é feito via WhatsApp, onde tiramos dúvidas básicas sobre horários e valores. A primeira sessão é uma entrevista inicial para entender suas queixas.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Final -->
+<section class="py-section-padding px-margin-mobile md:px-margin-desktop">
+<div class="max-w-container-max mx-auto bg-primary rounded-3xl p-12 md:p-20 text-center relative overflow-hidden fade-in">
+<!-- Decorative circle -->
+<div class="absolute -top-20 -right-20 w-64 h-64 bg-secondary/20 rounded-full blur-3xl"></div>
+<h2 class="font-headline-md text-headline-md text-on-primary mb-6 relative z-10">Dê o primeiro passo para sua saúde mental hoje</h2>
+<p class="text-on-primary opacity-80 mb-10 max-w-2xl mx-auto relative z-10">Agende sua avaliação inicial e descubra como a Terapia Cognitivo-Comportamental pode transformar sua qualidade de vida no Centro do Rio.</p>
+<a class="inline-flex items-center gap-4 bg-secondary text-on-secondary px-10 py-5 rounded-full font-bold text-lg hover:scale-105 transition-transform shadow-xl relative z-10" href="https://wa.me/5521999999999">
+<span class="material-symbols-outlined">chat</span>
+                Falar com a Dra. Fernanda
+            </a>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-container rounded-t-xl py-section-padding px-margin-mobile md:px-margin-desktop">
+<div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-3 gap-stack-lg">
+<div class="flex flex-col gap-4">
+<div class="font-headline-sm text-headline-sm text-primary">Fernanda Goulart</div>
+<p class="text-on-surface-variant font-body-md">Psicologia Clínica com foco em TCC. Transformando vidas através de evidências científicas e acolhimento.</p>
+</div>
+<div class="flex flex-col gap-4">
+<div class="font-bold text-secondary uppercase tracking-widest text-label-md">Menu</div>
+<nav class="flex flex-col gap-2">
+<a class="text-on-surface-variant hover:text-primary transition-all duration-300 hover:translate-x-1" href="#inicio">Início</a>
+<a class="text-on-surface-variant hover:text-primary transition-all duration-300 hover:translate-x-1" href="#especialidades">Especialidades</a>
+<a class="text-on-surface-variant hover:text-primary transition-all duration-300 hover:translate-x-1" href="#servicos">Serviços</a>
+<a class="text-on-surface-variant hover:text-primary transition-all duration-300 hover:translate-x-1" href="#depoimentos">Depoimentos</a>
+</nav>
+</div>
+<div class="flex flex-col gap-4">
+<div class="font-bold text-secondary uppercase tracking-widest text-label-md">Contato</div>
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary">location_on</span>
+                    Centro, Rio de Janeiro - RJ
+                </div>
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary">mail</span>
+                    contato@fernandagoulart.com.br
+                </div>
+<div class="flex gap-4 mt-4">
+<a class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined">share</span>
+</a>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto mt-16 pt-8 border-t border-outline-variant/30 text-center text-label-md text-on-surface-variant">
+            © 2024 Fernanda Goulart. Psicologia Clínica e TCC. Todos os direitos reservados.
+        </div>
+</footer>
+<!-- FAB WhatsApp -->
+<a class="fixed bottom-8 right-8 z-[100] w-16 h-16 bg-secondary text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 active:scale-95 transition-all group overflow-hidden" href="https://wa.me/5521999999999">
+<span class="material-symbols-outlined text-3xl">chat</span>
+<div class="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</a>
+<script>
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+        // Accordion Logic
+        function toggleAccordion(button) {
+            const item = button.parentElement;
+            const isActive = item.classList.contains('active');
+            
+            // Close all other items
+            document.querySelectorAll('.accordion-item').forEach(el => el.classList.remove('active'));
+            
+            if (!isActive) {
+                item.classList.add('active');
+            }
+        }
+
+        // Smooth scroll adjustment for fixed header
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body></html>
